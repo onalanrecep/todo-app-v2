@@ -11,7 +11,7 @@
     flex-direction: column;
     @include mq(){
         width: 30%;
-        border-right: 5px dashed $acikmavi;
+        border-right: 5px solid $acikmavi;
         min-width: 310px;
         margin-bottom: 40px;
 

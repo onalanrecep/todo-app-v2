@@ -8,7 +8,7 @@ class Navbar extends PureComponent {
     const { showForm } = this.props;
     return (
       <header className="header">
-        <div className="header-logo">KodTodo</div>
+        <div className="header-logo">React Görev</div>
         <nav className="header-menu">
           <button
             value="ifClickEvent"
