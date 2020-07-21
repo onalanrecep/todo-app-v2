@@ -13,18 +13,18 @@ const INITIAL_STATE = {
   groups: [
     {
       groupId: 1,
-      groupName: 'Okul',
+      groupName: 'Ofis',
       cards: [
         {
-          header: 'Odev',
-          text: 'Okul Odevlerini Yapmayi iniutma',
+          header: 'Müşteri Buluşması',
+          text: 'Web site taslak oluşturma',
           imgSrc: '',
           date: '29-06-2020',
           tags: 2,
         },
         {
           header: 'Proje Teslimi',
-          text: 'Oyun Programlama odevi teslim edilecek',
+          text: 'Kontrakt imzalanacak',
           imgSrc: '',
           date: '30-06-2020',
           tags: 2,
@@ -33,11 +33,11 @@ const INITIAL_STATE = {
     },
     {
       groupId: 2,
-      groupName: 'Is',
+      groupName: 'Müşteriler',
       cards: [
         {
-          header: 'Scrum Bulusmasi',
-          text: 'Okul Odevlerini Yapmayi Unutma',
+          header: 'UI Tasarım',
+          text: 'Blue printler sunulacak',
           imgSrc: '',
           date: '29-06-2020',
           tag: 2,
@@ -51,7 +51,7 @@ const INITIAL_STATE = {
         {
           header: 'Piknik',
           text:
-            'aOkul arkadaslari ile beraber piknige gidilecek. Haftasonuna kadar isleri hallet',
+            'Çocuklar çok sıkıldı',
           imgSrc: '',
           date: '01-07-2020',
           tag: 3,
@@ -62,20 +62,7 @@ const INITIAL_STATE = {
       groupId: 4,
       groupName: 'E-spor',
       cards: [],
-    },
-    {
-      groupId: 5,
-      groupName: 'aasd',
-      cards: [
-        {
-          header: 'asdad',
-          text: 'asdadad',
-          imgSrc: ' ',
-          date: ' asdsad',
-          tag: 3,
-        },
-      ],
-    },
+    }
   ],
 };
 
