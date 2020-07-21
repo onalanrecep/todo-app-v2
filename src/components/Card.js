@@ -1,26 +1,48 @@
-import React from "react"
-import "../styles/Card.scss"
+import React from 'react';
+import { connect } from 'react-redux';
+import '../styles/Card.scss';
 
-function Card(props) {
-    console.log(props);
-    const { cards } = props
-    return (
-         cards.map((card, i) => {
-             return (
-            <div key={card.header + i} className="card">
-                <div className="card-left">
-                <div className="card-left-header">{card.header}</div>
-                <div className="card-left-text">{card.text}</div>
-            <div className="card-left-tag">{card.tag}</div>
-           </div>
-          <div className="card-right">
-            <div className="card-right-image">IMG</div>
-            <div className="card-right-date">{card.date}</div>
+function Card({ Cards = ['any'], groupId, deleteCard }) {
+  return Cards.map((card, i) => {
+    if (card !== 'any') {
+      return (
+        <section key={Math.random()} className="card">
+          <div className="card-info">
+            <div className="card-info-left">
+              <div className="card-info-left-header">{card.header}</div>
+              <div className="card-left-text">{card.text}</div>
+              <div className="card-left-tag">{card.tag}</div>
+            </div>
+            <div className="card-info-right">
+              <div className="card-info-right-image">IMG</div>
+              <div className="card-info-right-date">{card.date}</div>
+            </div>
           </div>
-        </div>
-             )
-         })
-    )
+          <div className="card-buttons">
+            <button
+              onClick={() => {deleteCard(groupId, i)}}
+              type="button"
+            >
+              Karti Sil
+            </button>
+            <button type="button">Kart Duzenle</button>
+          </div>
+        </section>
+      );
+    }
+    return <div key={card}>Etkinlik Yok</div>;
+  });
 }
 
-export default Card;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    deleteCard: (groupId, cardIndex) =>
+      dispatch({
+        type: 'DELETE_CARD',
+        groupId,
+        cardIndex,
+      }),
+  };
+};
+
+export default connect(null, mapDispatchToProps)(Card);
